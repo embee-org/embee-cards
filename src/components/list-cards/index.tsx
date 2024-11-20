@@ -12,10 +12,7 @@ export function ListCards({ id }: Props) {
 	return (
 		<ul className="flex flex-row flex-wrap gap-2 h-full w-full">
 			{data.map((card) => (
-				<li
-					key={card.id}
-					className="flex flex-col gap-2 p-2 rounded-md shadow-md"
-				>
+				<li key={card.id} className="flex flex-col gap-2 p-2">
 					<BorderCard
 						username={"eishacodelocho"}
 						rank={card.rank}
