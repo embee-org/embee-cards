@@ -18,7 +18,7 @@ type Props = {
 export default function RootLayout({ children }: Readonly<Props>) {
 	return (
 		<html lang="es">
-			<body className="bg-gray-50 dark:bg-gray-950 text-yellow-600 flex flex-col min-h-screen w-full">
+			<body className="bg-gray-50 dark:bg-gray-950 text-yellow-600 grid grid-flow-row grid-rows-[auto_1fr_auto] h-screen w-full">
 				<Header />
 				{children}
 				<Footer />
