@@ -6,7 +6,7 @@ type Props = {
 
 export function BasePage({ children, ...props }: Props) {
 	return (
-		<main {...props} className={`p-4 h-full w-full ${props?.className ?? ""}`}>
+		<main {...props} className={`p-4 w-full ${props?.className ?? ""}`}>
 			{children}
 		</main>
 	);
