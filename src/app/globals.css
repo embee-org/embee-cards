@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--family-montserrat: "Montserrat Variable", sans-serif;
+	--family-poppins: "Poppins", sans-serif;
+}
+
+html {
+	scrollbar-gutter: initial;
+}
