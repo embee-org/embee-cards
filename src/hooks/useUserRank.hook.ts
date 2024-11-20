@@ -1,19 +1,21 @@
+"use client";
 import { UserRank } from "@/models/interfaces";
-import { getUsersRanking } from "@/services";
+import { getUserById } from "@/services";
 import { useEffect, useState } from "react";
 
-export function useUserRankHook() {
-	const [data, setData] = useState<UserRank[]>([]);
+export function useUserRankHook({ id }: { id: string }) {
+	const [data, setData] = useState<UserRank>();
 	const [loading, setLoading] = useState<boolean>(false);
 
 	useEffect(() => {
-		getRanking();
+		getUser();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
-	const getRanking = async () => {
+	const getUser = async () => {
 		setLoading(true);
-		getUsersRanking()
-			.then(({ users }) => setData(users))
+		getUserById({ id })
+			.then(({ user }) => setData(user))
 			.finally(() => setLoading(false));
 	};
 
