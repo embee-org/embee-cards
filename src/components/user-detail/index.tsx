@@ -38,9 +38,7 @@ export function UserDetail({ id }: Props) {
 				<div className="flex items-center justify-evenly font-sans font-semibold w-full">
 					<p className="text-xl">Rank:</p>
 					<Image
-						src={`${BASE_HREF}/icons/rank/${rankMapper(
-							data.rank
-						).toLocaleLowerCase()}.webp`}
+						src={`${BASE_HREF}/icons/rank/${rankMapper(data.rank)}.webp`}
 						alt="Leaderboard"
 						width={80}
 						height={80}
