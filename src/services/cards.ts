@@ -1,6 +1,7 @@
 import { BASE_HREF } from "@/consts/url";
+import { Card } from "@/models/interfaces";
 
-export const getCards = async () => {
+export const getCards = async (): Promise<{ cards: Card[] }> => {
 	const res = await fetch(`${BASE_HREF}/data/cards.json`, {
 		method: "GET",
 		headers: {
