@@ -18,7 +18,7 @@ export function LinkBack({ url, ...props }: Props) {
 		<Link
 			{...props}
 			href={url}
-			className={`bg-t1-secondary hover:bg-t1-primary  hover:dark:bg-t1-primary-dark rounded-full text-t1-primary dark:text-t1-primary-dark hover:text-t1-secondary p-2 font-sans font-semibold outline outline-4 outline-t1-primary hover:outline-t1-secondary duration-500 ${
+			className={`bg-t1-secondary hover:bg-t1-primary  hover:dark:bg-t1-primary-dark rounded-full text-t1-primary dark:text-t1-primary-dark hover:text-t1-secondary p-1 font-sans font-semibold outline outline-4 outline-t1-primary hover:outline-t1-secondary duration-500 ${
 				props?.className ?? ""
 			}`}
 			onMouseEnter={showHovered}
@@ -26,8 +26,8 @@ export function LinkBack({ url, ...props }: Props) {
 		>
 			<ChevronIcon
 				color={isHovered ? "#af9660" : dark ? "#DB1A23ff" : "#831415ff"}
-				width={30}
-				height={30}
+				width={25}
+				height={25}
 			/>
 		</Link>
 	);
