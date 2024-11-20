@@ -1,10 +1,10 @@
 "use client";
-import { useUserRankHook } from "@/hooks/useUserRank.hook";
+import { useUsersRankHook } from "@/hooks/useUsersRank.hook";
 import { rankMapper } from "@/mappers";
 import { PreviewRanking } from "../preview-ranking";
 
 export function ListRanking() {
-	const { data } = useUserRankHook();
+	const { data } = useUsersRankHook();
 
 	return (
 		<ul className="w-[600px] max-w-[80vw]">
