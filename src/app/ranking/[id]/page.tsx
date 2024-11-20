@@ -1,4 +1,5 @@
 import { BasePage } from "@/components/base-page";
+import { ListCards } from "@/components/list-cards";
 import { UserDetail } from "@/components/user-detail";
 import { User } from "@/models/interfaces";
 import { readFile } from "node:fs/promises";
@@ -24,7 +25,9 @@ export default async function UserIdPage({ params }: Props) {
 	return (
 		<BasePage className="flex flex-wrap">
 			{id && <UserDetail id={id} />}
-			<section className="flex gap-4 w-3/4"></section>
+			<section className="flex px-4 w-full">
+				{id && <ListCards id={id} />}
+			</section>
 		</BasePage>
 	);
 }
