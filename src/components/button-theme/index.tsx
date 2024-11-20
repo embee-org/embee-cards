@@ -1,5 +1,6 @@
 "use client";
 
+import { BASE_HREF } from "@/consts/url";
 import { useChangeThemeHook } from "@/hooks";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
@@ -7,7 +8,7 @@ import { useEffect, useRef, useState } from "react";
 const ImageDark = () => {
 	return (
 		<Image
-			src="/cards/imgs/remera-t1-2023.png"
+			src={`${BASE_HREF}/imgs/remera-t1-2023.png`}
 			alt="Moon icon"
 			width={40}
 			height={52.5}
@@ -18,7 +19,7 @@ const ImageDark = () => {
 const ImageLight = () => {
 	return (
 		<Image
-			src="/cards/imgs/remera-t1-2024.png"
+			src={`${BASE_HREF}/imgs/remera-t1-2024.png`}
 			alt="Sun icon"
 			width={40}
 			height={52.5}

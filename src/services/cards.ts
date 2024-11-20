@@ -1,5 +1,7 @@
+import { BASE_HREF } from "@/consts/url";
+
 export const getCards = async () => {
-	const res = await fetch("/cards/data/cards.json", {
+	const res = await fetch(`${BASE_HREF}/data/cards.json`, {
 		method: "GET",
 		headers: {
 			"Content-Type": "application/json",

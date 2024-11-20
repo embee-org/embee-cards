@@ -1,4 +1,5 @@
 "use client";
+import { BASE_HREF } from "@/consts/url";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -14,7 +15,7 @@ export function Navbar() {
 		<nav className="bg-neutral-50 dark:bg-gray-950 flex items-center gap-2 p-4 h-fit w-full">
 			<Image
 				className="aspect-w-[16] aspect-h-[9]"
-				src="/cards/logos/t1.png"
+				src={`${BASE_HREF}/logos/t1.png`}
 				width={50}
 				height={50}
 				alt="Avatar abejajayz"

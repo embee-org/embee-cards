@@ -1,9 +1,10 @@
+import { BASE_HREF } from "@/consts/url";
 import { User, UserRank } from "@/models/interfaces";
 
 export const getUsersData = async (): Promise<{
 	users: User[];
 }> => {
-	const res = await fetch("/cards/data/users.json", {
+	const res = await fetch(`${BASE_HREF}/data/users.json`, {
 		method: "GET",
 	});
 

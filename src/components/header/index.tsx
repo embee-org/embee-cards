@@ -1,3 +1,4 @@
+import { BASE_HREF } from "@/consts/url";
 import Image from "next/image";
 import { Navbar } from "../navbar";
 
@@ -7,7 +8,7 @@ export function Header() {
 			<Navbar />
 			<div className="flex items-center justify-center gap-6">
 				<Image
-					src="/cards/imgs/abejajayz.png"
+					src={`${BASE_HREF}/imgs/abejajayz.png`}
 					width={100}
 					height={100}
 					alt="Avatar abejajayz"

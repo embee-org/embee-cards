@@ -1,3 +1,4 @@
+import { BASE_HREF } from "@/consts/url";
 import { Rank } from "@/models/enums";
 import Image from "next/image";
 import Link from "next/link";
@@ -37,7 +38,7 @@ export function PreviewRanking({ rank, username, id, quantity }: Props) {
 		>
 			<div className="flex flex-col items-center h-fit w-fit">
 				<Image
-					src={`/cards/icons/rank/${rank.toLocaleUpperCase()}.webp`}
+					src={`${BASE_HREF}/icons/rank/${rank.toLocaleUpperCase()}.webp`}
 					width={60}
 					height={60}
 					alt="Challenger"
