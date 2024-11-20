@@ -18,23 +18,20 @@ export function PreviewRanking({ rank, username, id, quantity }: Props) {
 		if (rank === Rank.Platinum) return "bg-border-platinum";
 		if (rank === Rank.Gold) return "bg-border-gold";
 		if (rank === Rank.Silver) return "bg-border-silver";
-		if (rank === Rank.Bronze) return "bg-border-bronze";
+		return "bg-border-bronze";
 	};
 
 	const getTextStyle = () => {
 		if (rank === Rank.Challenger) return "text-neutral-900";
 		if (rank === Rank.Master) return "text-neutral-100";
-		if (rank === Rank.Diamond) return "text-white";
-		if (rank === Rank.Platinum) return "text-white";
-		if (rank === Rank.Gold) return "text-white";
 		if (rank === Rank.Silver) return "text-gray-950";
-		if (rank === Rank.Bronze) return "text-white";
+		return "text-white";
 	};
 
 	return (
 		<Link
 			href={`/ranking/${id}`}
-			className={`${getBorderStyle()} flex items-center justify-between rounded-lg p-4 mb-4 h-fit w-full`}
+			className={`${getBorderStyle()} flex items-center justify-between rounded-lg p-4 mb-8 h-fit w-full`}
 		>
 			<div className="flex flex-col items-center h-fit w-fit">
 				<Image
