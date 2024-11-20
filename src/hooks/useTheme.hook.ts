@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 
-export function useChangeThemeHook() {
+export function useThemeHook() {
 	const [dark, setDark] = useState(false);
 
 	useEffect(() => {
@@ -18,6 +18,7 @@ export function useChangeThemeHook() {
 	const changeToDark = () => {
 		localStorage.setItem("theme", "dark");
 		const htmlElement = document.querySelector("html") as HTMLElement;
+		htmlElement.removeAttribute("class");
 		htmlElement.classList.add("dark");
 		setDark(true);
 	};

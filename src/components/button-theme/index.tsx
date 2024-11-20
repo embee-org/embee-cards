@@ -1,7 +1,7 @@
 "use client";
 
 import { BASE_HREF } from "@/consts/url";
-import { useChangeThemeHook } from "@/hooks";
+import { useThemeHook } from "@/hooks";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
@@ -28,7 +28,7 @@ const ImageLight = () => {
 };
 
 export function ButtonTheme() {
-	const { dark, changeTheme } = useChangeThemeHook();
+	const { dark, changeTheme } = useThemeHook();
 	const [open, setOpen] = useState(false);
 	const containerRef = useRef<HTMLDivElement>(null);
 
@@ -52,7 +52,7 @@ export function ButtonTheme() {
 	return (
 		<div
 			ref={containerRef}
-			className="bg-red-600 rounded-lg gap-4 flex items-center relative"
+			className="bg-t1-primary dark:bg-t1-primary-dark rounded-lg gap-4 flex items-center relative"
 		>
 			<button type="button" onClick={() => setOpen(!open)}>
 				{dark ? <ImageDark /> : <ImageLight />}
