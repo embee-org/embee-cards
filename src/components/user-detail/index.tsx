@@ -13,38 +13,38 @@ export function UserDetail({ id }: Props) {
 	const { data } = useUserRankHook({ id });
 
 	return (
-		<article className="flex flex-col items-center outline outline-4 outline-t1-secondary p-4 rounded-lg gap-4 h-fit w-[450px] max-w-1/4 relative">
-			<LinkBack url="/ranking" className="absolute top-4 left-4" />
+		<article className="flex items-center outline outline-4 outline-t1-secondary py-12 px-4 rounded-lg gap-4 h-fit w-full relative">
+			<LinkBack url="/ranking" className="absolute top-4 right-4" />
 			{data && (
-				<Image
-					className="rounded-full"
-					src={data.avatar}
-					alt={data.username}
-					width={100}
-					height={100}
-				/>
+				<div className="flex flex-col gap-4 items-center w-fit h-full">
+					<Image
+						className="rounded-full"
+						src={data.avatar}
+						alt={data.username}
+						width={100}
+						height={100}
+					/>
+					<h2 className="text-center font-serif font-extrabold text-2xl w-full uppercase">
+						{data.username}
+					</h2>
+				</div>
 			)}
 			{data && (
-				<h2 className="text-center font-serif font-extrabold text-2xl w-full uppercase">
-					{data.username}
-				</h2>
-			)}
-			{data && (
-				<div className="flex items-center justify-evenly font-sans font-semibold w-full">
-					<p className="text-xl">Rank:</p>
+				<div className="flex flex-col items-center justify-between font-sans font-semibold gap-4 h-full w-full">
 					<Image
 						src={`${BASE_HREF}/icons/rank/${rankMapper(data.rank)}.webp`}
 						alt="Leaderboard"
 						width={80}
 						height={80}
 					/>
+					<p className="text-xl">Rango</p>
 				</div>
 			)}
 
 			{data && (
-				<div className="flex items-center justify-evenly font-sans text-xl font-semibold w-full">
-					<p>Cartas:</p>
+				<div className="flex flex-col items-center justify-between font-sans text-xl font-semibold gap-4 h-full w-full">
 					<p className="font-serif font-normal">{data.cards.length} / 125</p>
+					<p>Cartas</p>
 				</div>
 			)}
 		</article>
