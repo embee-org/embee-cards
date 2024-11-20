@@ -10,6 +10,11 @@ export default {
 	],
 	theme: {
 		extend: {
+			colors: {
+				"t1-secondary": "#af9660",
+				"t1-primary-dark": "#DB1A23ff",
+				"t1-primary": "#831415ff",
+			},
 			fontFamily: {
 				sans: ["var(--family-montserrat)", ...fontFamily.sans],
 				serif: ["var(--family-poppins)", ...fontFamily.serif],
