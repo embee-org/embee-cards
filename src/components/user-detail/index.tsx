@@ -3,7 +3,7 @@ import { BASE_HREF } from "@/consts/url";
 import { useUserRankHook } from "@/hooks";
 import { rankMapper } from "@/mappers";
 import Image from "next/image";
-import Link from "next/link";
+import { LinkBack } from "../link-back";
 
 type Props = {
 	id: string;
@@ -13,13 +13,8 @@ export function UserDetail({ id }: Props) {
 	const { data } = useUserRankHook({ id });
 
 	return (
-		<article className="flex flex-col items-center outline outline-4 outline-t1-secondary p-4 rounded-lg gap-4 h-fit w-[450px] max-w-1/4">
-			<Link
-				href={`/ranking`}
-				className="bg-t1-secondary hover:bg-t1-primary  hover:dark:bg-t1-primary-dark rounded-lg text-t1-primary dark:text-t1-primary-dark hover:text-t1-secondary px-6 py-2 font-sans font-semibold outline outline-4 outline-t1-primary hover:outline-t1-secondary duration-500"
-			>
-				Volver
-			</Link>
+		<article className="flex flex-col items-center outline outline-4 outline-t1-secondary p-4 rounded-lg gap-4 h-fit w-[450px] max-w-1/4 relative">
+			<LinkBack url="/ranking" className="absolute top-4 left-4" />
 			{data && (
 				<Image
 					className="rounded-full"
