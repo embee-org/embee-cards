@@ -1,42 +1,40 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 "use client";
-import { useEffect, useState } from "react";
+import { useThemeStore } from "@/store";
+import { useEffect } from "react";
 
 export function useThemeHook() {
-	const [dark, setDark] = useState(false);
+	const { isDark, activeDarkMode, removeDarkMode } = useThemeStore();
 
 	useEffect(() => {
 		const data = localStorage.getItem("theme");
+
 		const prefersDarkMode = window.matchMedia(
 			"(prefers-color-scheme: dark)"
 		).matches;
-		if (data === "dark" || (prefersDarkMode && !data)) {
-			changeToDark();
-			setDark(true);
-		}
+
+		const isDark = data === "dark" || (prefersDarkMode && !data);
+		isDark ? changeToDark() : changeToLight();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	const changeToDark = () => {
-		localStorage.setItem("theme", "dark");
 		const htmlElement = document.querySelector("html") as HTMLElement;
 		htmlElement.removeAttribute("class");
 		htmlElement.classList.add("dark");
-		setDark(true);
+		activeDarkMode();
 	};
 
 	const changeToLight = () => {
-		localStorage.removeItem("theme");
 		const htmlElement = document.querySelector("html") as HTMLElement;
 		htmlElement.removeAttribute("class");
-		setDark(false);
+		removeDarkMode();
 	};
 
-	const changeTheme = () => {
-		// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-		dark ? changeToLight() : changeToDark();
-	};
+	const changeTheme = () => (isDark ? changeToLight() : changeToDark());
 
 	return {
-		dark,
+		dark: isDark,
 		changeTheme,
 	};
 }
