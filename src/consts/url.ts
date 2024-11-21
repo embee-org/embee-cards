@@ -1,1 +1,1 @@
-export const BASE_HREF = "/embee-cards";
+export const BASE_HREF = "/";

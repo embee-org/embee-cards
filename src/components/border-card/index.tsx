@@ -21,7 +21,7 @@ export function BorderCard({ rank, img, avatar, username }: Props) {
 			></div>
 			<Image
 				className="absolute top-0 left-0 aspect-[5/9]"
-				src={`/embee-cards/borders/${rank.toLowerCase()}.png`}
+				src={`/borders/${rank.toLowerCase()}.png`}
 				alt={`Borde rango ${rank.toLowerCase()}`}
 				width={250}
 				height={450}

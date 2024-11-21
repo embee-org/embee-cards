@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-	basePath: "/embee-cards",
+	basePath: "/",
 	images: {
 		domains: [
 			"static-cdn.jtvnw.net",

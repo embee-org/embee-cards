@@ -9,6 +9,8 @@ type Props = {
 	params: Promise<{ id: string }>;
 };
 
+export const runtime = "edge";
+
 export async function generateStaticParams() {
 	const filePath = path.join(process.cwd(), "public", "data", "users.json");
 	const fileContents = await readFile(filePath, "utf-8");
