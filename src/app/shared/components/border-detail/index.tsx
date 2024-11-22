@@ -7,7 +7,7 @@ type Props = {
 	img: string;
 };
 
-export function BorderCard({ rank, img, avatar, username }: Props) {
+export function BorderDetail({ rank, img, avatar, username }: Props) {
 	return (
 		<div
 			className={`flex flex-col items-center w-[250px] aspect-[5/9] pt-4 relative`}
@@ -20,7 +20,7 @@ export function BorderCard({ rank, img, avatar, username }: Props) {
 			></div>
 			<img
 				className="absolute top-0 left-0 aspect-[5/9]"
-				src={`/borders/${rank.toLowerCase()}.png`}
+				src={`/imgs/borders/${rank.toLowerCase()}.png`}
 				alt={`Borde rango ${rank.toLowerCase()}`}
 				width={250}
 				height={450}

@@ -1,6 +1,6 @@
 import { BasePage } from "@/shared/components/base-page";
 import { TabItem, TabsBox } from "@/shared/components/tabs";
-import { ListCards } from "@/ui/components/list-cards";
+import { ListBorders } from "@/ui/components/list-borders";
 import { UserDetail } from "@/ui/components/user-detail";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
@@ -34,7 +34,7 @@ export default function UserPage() {
 					</TabItem>
 				</TabsBox>
 				<section className="flex px-4 w-full">
-					{id && <ListCards id={id} />}
+					{id && <ListBorders id={id} />}
 				</section>
 			</article>
 		</BasePage>

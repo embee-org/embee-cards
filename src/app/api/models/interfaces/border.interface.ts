@@ -1,6 +1,6 @@
 import { Rank } from "@/api/models/enums";
 
-export interface Card {
+export interface Border {
 	id: string;
 	title: string;
 	img: string;

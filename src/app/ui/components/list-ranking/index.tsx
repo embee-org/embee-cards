@@ -13,7 +13,7 @@ export function ListRanking() {
 						username={user.username}
 						id={user.id}
 						rank={rankMapper(user.rank)}
-						quantity={user.cards.length}
+						quantity={user.borders.length}
 					/>
 				</li>
 			))}

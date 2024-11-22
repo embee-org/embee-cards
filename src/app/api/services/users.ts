@@ -5,7 +5,7 @@ export const getUsersRanking = async (): Promise<{ users: UserRank[] }> => {
 	const { users } = await getUsersClient();
 
 	const sortedUsers = users.sort(
-		(a, b) => b.cards.length - a.cards.length
+		(a, b) => b.borders.length - a.borders.length
 	) as UserRank[];
 
 	let rank = 0;
@@ -13,7 +13,7 @@ export const getUsersRanking = async (): Promise<{ users: UserRank[] }> => {
 	for (let i = 0; i < sortedUsers.length; i++) {
 		if (
 			i > 0 &&
-			sortedUsers[i].cards.length === sortedUsers[i - 1].cards.length
+			sortedUsers[i].borders.length === sortedUsers[i - 1].borders.length
 		) {
 			sortedUsers[i].rank = rank;
 			continue;
@@ -35,7 +35,7 @@ export const getUserById = async ({
 	const { users } = await getUsersClient();
 
 	const sortedUsers = users.sort(
-		(a, b) => b.cards.length - a.cards.length
+		(a, b) => b.borders.length - a.borders.length
 	) as UserRank[];
 
 	let rank = 0;
@@ -43,7 +43,7 @@ export const getUserById = async ({
 	for (let i = 0; i < sortedUsers.length; i++) {
 		if (
 			i > 0 &&
-			sortedUsers[i].cards.length === sortedUsers[i - 1].cards.length
+			sortedUsers[i].borders.length === sortedUsers[i - 1].borders.length
 		) {
 			sortedUsers[i].rank = rank;
 			continue;
