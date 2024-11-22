@@ -36,7 +36,7 @@ export function BorderDetail({ rank, img, avatar, username }: Props) {
 			className={`flex flex-col items-center w-[250px] aspect-[5/9] pt-4 relative`}
 		>
 			<div
-				className={`bg-cover bg-center bg-no-repeat h-[345px] w-[calc(220px)]`}
+				className={`bg-cover bg-center bg-no-repeat h-[345px] w-[225px]`}
 				style={{
 					backgroundImage: `url(${img})`,
 				}}
