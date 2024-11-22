@@ -6,7 +6,7 @@ export function Footer() {
 			<p className="w-fit">
 				Inspirado en:{" "}
 				<Link
-					to="https://manz.dev/manzborders/"
+					to="https://manz.dev/manzcards/"
 					target="_black"
 					className="text-t1-secondary dark:text-t1-secondary"
 				>
