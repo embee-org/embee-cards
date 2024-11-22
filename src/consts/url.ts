@@ -1,1 +1,1 @@
-export const BASE_HREF = "/";
+export const BASE_HREF = "";
