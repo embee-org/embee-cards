@@ -11,7 +11,7 @@ export function ListBorders({ id }: Props) {
 	return (
 		<ul className="flex flex-row flex-wrap gap-2 h-full w-full">
 			{data.map((border) => (
-				<li key={border.id} className="flex flex-col gap-2 p-2">
+				<li key={border.id} className="flex flex-col gap-2">
 					<BorderDetail
 						username={"eishacodelocho"}
 						rank={border.rank}
