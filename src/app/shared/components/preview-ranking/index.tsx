@@ -1,4 +1,5 @@
 import { Rank } from "@/api/models/enums";
+import { RankLogo } from "@/shared/components/rank-logo";
 import { Link } from "react-router-dom";
 
 type Props = {
@@ -32,15 +33,7 @@ export function PreviewRanking({ rank, username, id, quantity }: Props) {
 			className={`${getBorderStyle()} flex items-center justify-between rounded-lg p-4 mb-8 h-fit w-full`}
 		>
 			<div className="flex flex-col items-center h-fit w-fit">
-				<img
-					src={`/icons/rank/${rank.toLocaleUpperCase()}.webp`}
-					width={60}
-					height={60}
-					alt={`Logo ${rank.toLocaleLowerCase()}`}
-				/>
-				<h3 className={`${getTextStyle()} text-sm font-semibold font-serif`}>
-					Rango
-				</h3>
+				<RankLogo rank={rank} />
 			</div>
 			<p className={`${getTextStyle()} text-2xl font-extrabold uppercase`}>
 				{username}

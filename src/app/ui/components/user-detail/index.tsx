@@ -1,3 +1,4 @@
+import { RankLogo } from "@/shared/components/rank-logo";
 import { rankMapper } from "@/shared/mappers";
 import { LinkBack } from "@/ui/components/link-back";
 import { useUserRankHook } from "@/ui/hooks";
@@ -28,13 +29,7 @@ export function UserDetail({ id }: Props) {
 			)}
 			{data && (
 				<div className="flex items-center justify-evenly font-sans font-semibold gap-4 h-full w-full">
-					<p className="text-xl">Rango</p>
-					<img
-						src={`/icons/rank/${rankMapper(data.rank)}.webp`}
-						alt="Leaderboard"
-						width={80}
-						height={80}
-					/>
+					<RankLogo rank={rankMapper(data.rank)} />
 				</div>
 			)}
 
