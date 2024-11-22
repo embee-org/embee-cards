@@ -35,7 +35,7 @@ export function UserDetail({ id }: Props) {
 
 			{data && (
 				<div className="flex items-center justify-evenly font-sans text-xl font-semibold gap-4 h-full w-full">
-					<p>Cartas</p>
+					<p>Bordes</p>
 					<p className="font-serif font-normal">{data.borders.length} / 125</p>
 				</div>
 			)}

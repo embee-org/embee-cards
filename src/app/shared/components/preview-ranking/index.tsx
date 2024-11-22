@@ -42,7 +42,7 @@ export function PreviewRanking({ rank, username, id, quantity }: Props) {
 				className={`${getTextStyle()} flex flex-col items-center font-extrabold text-3xl`}
 			>
 				{quantity}
-				<span className="text-sm font-semibold font-serif">Cartas</span>
+				<span className="text-sm font-semibold font-serif">Bordes</span>
 			</p>
 		</Link>
 	);
