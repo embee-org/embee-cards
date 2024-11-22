@@ -14,7 +14,7 @@ export function Footer() {
 				</Link>{" "}
 				y{" "}
 				<Link
-					to="https://borders.uxanarangel.com"
+					to="https://cards.uxanarangel.com/"
 					target="_black"
 					className="text-t1-secondary dark:text-t1-secondary"
 				>
