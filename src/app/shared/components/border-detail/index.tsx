@@ -43,6 +43,13 @@ export function BorderDetail({ rank, img, avatar, username }: Props) {
 					backgroundImage: `url(${img})`,
 				}}
 			></div>
+			<p
+				className={`bg-[#00000099] backdrop-blur-sm absolute ${
+					rank === Rank.Challenger ? "bottom-[90px]" : "bottom-[87px]"
+				} left-4 p-2 text-center text-sky-200 font-bold font-serif w-[90%]`}
+			>
+				Faker 2023
+			</p>
 			<img
 				className="absolute top-0 left-0 aspect-[5/9]"
 				src={`/imgs/borders/${rank.toLowerCase()}.png`}
@@ -50,6 +57,13 @@ export function BorderDetail({ rank, img, avatar, username }: Props) {
 				width={250}
 				height={450}
 			/>
+			<p
+				className={`absolute left-4 ${
+					rank === Rank.Challenger ? "bottom-[67px]" : "bottom-[63px]"
+				} text-sm text-center text-white w-[90%]`}
+			>
+				eishacodelocho
+			</p>
 			<SummonerSpell position="leftIcon" classCustom={spellLeftClass} />
 			<SummonerSpell position="rightIcon" classCustom={spellRightClass} />
 			<AvatarUser rank={rank} avatar={avatar} username={username} />
