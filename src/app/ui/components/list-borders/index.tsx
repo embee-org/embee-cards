@@ -3,6 +3,8 @@ import { useBordersByUser } from "@/ui/hooks";
 
 type Props = {
 	id: string;
+	leftIcon?: string;
+	rightIcon?: string;
 };
 
 export function ListBorders({ id }: Props) {

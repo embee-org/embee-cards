@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-expressions */
-import { useThemeStore } from "@/store";
+import { useThemeStore } from "@/ui/store";
 import { useEffect } from "react";
 
 export function useThemeHook() {

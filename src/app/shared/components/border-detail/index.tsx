@@ -1,4 +1,6 @@
 import { Rank } from "@/api/models/enums";
+import { AvatarUser } from "@/shared/components/avatar-user";
+import { SummonerSpell } from "@/ui/components/summoner-spell";
 
 type Props = {
 	username: string;
@@ -27,16 +29,6 @@ const getSpellRightClass = (rank: Rank): string => {
 	return spellRightClass;
 };
 
-const getAvatarClass = (rank: Rank) => {
-	let avatarClass = "absolute";
-	if (rank === Rank.Diamond || rank === Rank.Platinum) {
-		avatarClass += " bottom-[17px] left-[16px]";
-		return avatarClass;
-	}
-	avatarClass += " bottom-[12px] left-[17px]";
-	return avatarClass;
-};
-
 export function BorderDetail({ rank, img, avatar, username }: Props) {
 	const spellLeftClass = getSpellLeftClass(rank);
 	const spellRightClass = getSpellRightClass(rank);
@@ -58,27 +50,9 @@ export function BorderDetail({ rank, img, avatar, username }: Props) {
 				width={250}
 				height={450}
 			/>
-			<img
-				className={spellLeftClass}
-				src="/summoner-spell/flash.jpg"
-				width={34.8}
-				height={34.8}
-				alt="Spell left"
-			/>
-			<img
-				className={spellRightClass}
-				src="/summoner-spell/ignite.jpg"
-				width={34.8}
-				height={34.8}
-				alt="Spell right"
-			/>
-			<img
-				className={getAvatarClass(rank)}
-				src={avatar}
-				alt={`Avatar usuario ${username}`}
-				width={54}
-				height={52}
-			/>
+			<SummonerSpell position="leftIcon" classCustom={spellLeftClass} />
+			<SummonerSpell position="rightIcon" classCustom={spellRightClass} />
+			<AvatarUser rank={rank} avatar={avatar} username={username} />
 		</div>
 	);
 }

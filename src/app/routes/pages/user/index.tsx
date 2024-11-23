@@ -1,5 +1,6 @@
 import { BasePage } from "@/shared/components/base-page";
 import { TabItem, TabsBox } from "@/shared/components/tabs";
+import { FormSummonerSpell } from "@/ui/components/form-summoner-spell";
 import { ListBorders } from "@/ui/components/list-borders";
 import { UserDetail } from "@/ui/components/user-detail";
 import { useState } from "react";
@@ -33,6 +34,7 @@ export default function UserPage() {
 						Cartas
 					</TabItem>
 				</TabsBox>
+				<FormSummonerSpell />
 				<section className="flex px-4 w-full">
 					{id && <ListBorders id={id} />}
 				</section>
