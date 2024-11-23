@@ -12,8 +12,8 @@ export function SummonerSpell({ position, classCustom = "" }: Props) {
 		<img
 			className={`absolute aspect-square ${classCustom}`}
 			src={`/summoner-spell/${icon}`}
-			width={34.8}
-			height={34.8}
+			width={37}
+			height={37}
 			alt={`Spell ${position.replace("Icon", "")}`}
 		/>
 	);
