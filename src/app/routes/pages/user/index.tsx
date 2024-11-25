@@ -3,6 +3,7 @@ import { TabItem, TabsBox } from "@/shared/components/tabs";
 import { FormSummonerSpell } from "@/ui/components/form-summoner-spell";
 import { ListBorders } from "@/ui/components/list-borders";
 import { UserDetail } from "@/ui/components/user-detail";
+import { useUserRankHook } from "@/ui/hooks";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -13,11 +14,12 @@ enum TabItems {
 
 export default function UserPage() {
 	const { id } = useParams<{ id: string }>();
+	const { data } = useUserRankHook({ id: id ?? "" });
 	const [selected, setSelected] = useState(TabItems.Borders);
 
 	return (
 		<BasePage className="grid grid-flow-col grid-cols-[auto_1fr]">
-			{id && <UserDetail id={id} />}
+			{data && <UserDetail user={data} />}
 			<article className="flex flex-col gap-4 h-full w-full">
 				<TabsBox className="justify-center w-full">
 					<TabItem
@@ -36,7 +38,7 @@ export default function UserPage() {
 				</TabsBox>
 				<FormSummonerSpell />
 				<section className="flex px-4 w-full">
-					{id && <ListBorders id={id} />}
+					{data && <ListBorders user={data} />}
 				</section>
 			</article>
 		</BasePage>

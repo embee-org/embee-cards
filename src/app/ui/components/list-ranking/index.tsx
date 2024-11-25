@@ -1,13 +1,13 @@
 import { PreviewRanking } from "@/shared/components/preview-ranking";
 import { rankMapper } from "@/shared/mappers";
-import { useUsersRankHook } from "@/ui/hooks/useUsersRank.hook";
+import { useUsersStore } from "@/ui/store/user.store";
 
 export function ListRanking() {
-	const { data } = useUsersRankHook();
+	const res = useUsersStore((state) => state.res);
 
 	return (
 		<ul className="w-[600px] max-w-[80vw]">
-			{data.map((user) => (
+			{res?.users.map((user) => (
 				<li key={user.id}>
 					<PreviewRanking
 						username={user.username}
