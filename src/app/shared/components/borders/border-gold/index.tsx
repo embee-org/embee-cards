@@ -21,7 +21,7 @@ export function BorderGold({ name, rank, img, avatar, username }: Props) {
 					backgroundImage: `url(${img})`,
 				}}
 			></div>
-			<p className="bg-[#00000099] backdrop-blur-sm absolute bottom-[87px] left-4 p-2 text-center text-sky-200 font-bold font-serif w-[90%]">
+			<p className="bg-[#00000099] backdrop-blur-sm absolute bottom-[86px] left-4 p-2 text-center text-sky-200 font-bold font-serif w-[91%]">
 				{name}
 			</p>
 			<img
