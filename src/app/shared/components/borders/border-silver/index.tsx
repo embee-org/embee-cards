@@ -32,7 +32,7 @@ export function BorderSilver({ name, rank, img, avatar, username }: Props) {
 				height={450}
 			/>
 			<p
-				className={`absolute left-4 bottom-[63px] text-sm text-center text-white w-[90%]`}
+				className={`absolute left-4 bottom-[61px] text-sm text-center text-white w-[90%]`}
 			>
 				{username}
 			</p>
