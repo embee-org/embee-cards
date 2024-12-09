@@ -1,4 +1,4 @@
-import { BasePage } from "@/shared/components/base-page";
+import { BasePage } from "@/ui/components/base-page";
 
 export default function Home() {
 	return (

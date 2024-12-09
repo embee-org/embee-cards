@@ -1,6 +1,6 @@
 import BaseLayout from "@/routes/layouts/base-layout";
 import { HomePage, RankingPage, UserPage } from "@/routes/pages/routes";
-import { LoaderPage } from "@/shared/components/loader-page";
+import { LoaderPage } from "@/ui/components/loader-page";
 import { createBrowserRouter } from "react-router-dom";
 
 export const router = createBrowserRouter(

@@ -1,6 +1,6 @@
-import { BasePage } from "@/shared/components/base-page";
-import { ListRanking } from "@/ui/components/list-ranking";
+import { BasePage } from "@/ui/components/base-page";
 import { useUsersRankHook } from "@/ui/hooks";
+import { ListRanking } from "@/ui/store-components/list-ranking";
 import { useUsersStore } from "@/ui/store/user.store";
 
 export default function RankingPage() {

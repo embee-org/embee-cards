@@ -1,9 +1,9 @@
-import { BasePage } from "@/shared/components/base-page";
-import { TabItem, TabsBox } from "@/shared/components/tabs";
-import { FormSummonerSpell } from "@/ui/components/form-summoner-spell";
-import { ListBorders } from "@/ui/components/list-borders";
-import { UserDetail } from "@/ui/components/user-detail";
+import { BasePage } from "@/ui/components/base-page";
+import { TabItem, TabsBox } from "@/ui/components/tabs";
 import { useUserRankHook } from "@/ui/hooks";
+import { FormSummonerSpell } from "@/ui/store-components/form-summoner-spell";
+import { ListBorders } from "@/ui/store-components/list-borders";
+import { UserDetail } from "@/ui/store-components/user-detail";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 
