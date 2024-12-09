@@ -1,12 +1,15 @@
 import { BordersResponse } from "@/api/models/interfaces";
 
 export const getBordersClient = async (): Promise<BordersResponse> => {
-	const res = await fetch(`/data/borders.json`, {
-		method: "GET",
-		headers: {
-			"Content-Type": "application/json",
-		},
-	});
+	const res = await fetch(
+		"https://embee-org.github.io/embee-statics/data/borders.json",
+		{
+			method: "GET",
+			headers: {
+				"Content-Type": "application/json",
+			},
+		}
+	);
 
 	const data = await res.json();
 
