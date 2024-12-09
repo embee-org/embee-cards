@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 const ImageDark = () => {
 	return (
 		<img
-			src="/imgs/remera-t1-2023.png"
+			src="https://embee-org.github.io/embee-statics/images/t1/remera-2023.png"
 			alt="Moon icon"
 			width={40}
 			height={52.5}
@@ -15,7 +15,7 @@ const ImageDark = () => {
 const ImageLight = () => {
 	return (
 		<img
-			src="/imgs/remera-t1-2024.png"
+			src="https://embee-org.github.io/embee-statics/images/t1/remera-2024.png"
 			alt="Sun icon"
 			width={40}
 			height={52.5}

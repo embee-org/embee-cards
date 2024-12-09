@@ -9,7 +9,7 @@ export function Header() {
 				<img
 					loading="eager"
 					className="rounded-full"
-					src="/imgs/avatar-embee.jpg"
+					src="https://embee-org.github.io/embee-statics/images/embee/avatar.jpg"
 					width={100}
 					height={100}
 					alt="Avatar embeejayz"

@@ -26,7 +26,7 @@ export function BorderChallenger({ name, rank, img, avatar, username }: Props) {
 			</p>
 			<img
 				className="absolute top-0 left-0 aspect-[5/9]"
-				src="/imgs/borders/challenger.png"
+				src="https://embee-org.github.io/embee-statics/images/borders/challenger.png"
 				alt="Borde rango challenger"
 				width={250}
 				height={450}

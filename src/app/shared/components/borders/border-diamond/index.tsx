@@ -26,7 +26,7 @@ export function BorderDiamond({ name, rank, img, avatar, username }: Props) {
 			</p>
 			<img
 				className="absolute top-0 left-0 aspect-[5/9]"
-				src="/imgs/borders/diamond.png"
+				src="https://embee-org.github.io/embee-statics/images/borders/diamond.png"
 				alt="Borde rango diamond"
 				width={250}
 				height={450}

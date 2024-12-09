@@ -11,7 +11,7 @@ export function SummonerSpell({ position, classCustom = "" }: Props) {
 	return (
 		<img
 			className={`absolute aspect-square ${classCustom}`}
-			src={`/summoner-spell/${icon}`}
+			src={`https://embee-org.github.io/embee-statics/summoner-spell/${icon}`}
 			width={37}
 			height={37}
 			alt={`Spell ${position.replace("Icon", "")}`}

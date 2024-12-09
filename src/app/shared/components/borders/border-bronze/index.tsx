@@ -26,7 +26,7 @@ export function BorderBronze({ name, rank, img, avatar, username }: Props) {
 			</p>
 			<img
 				className="absolute top-0 left-0 aspect-[5/9]"
-				src="/imgs/borders/bronze.png"
+				src="https://embee-org.github.io/embee-statics/images/borders/bronze.png"
 				alt="Borde rango bronze"
 				width={250}
 				height={450}

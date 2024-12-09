@@ -13,7 +13,7 @@ export function Navbar() {
 		<nav className="bg-neutral-50 dark:bg-gray-950 flex items-center justify-around gap-2 p-4 h-fit w-full">
 			<img
 				className="aspect-w-[16] aspect-h-[9]"
-				src="/logos/t1.png"
+				src="https://embee-org.github.io/embee-statics/logos/t1.png"
 				width={50}
 				height={50}
 				alt="Avatar abejajayz"
